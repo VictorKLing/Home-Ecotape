@@ -7,9 +7,11 @@
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
+
 :root{
-    --blue: #1D4398;
+    --white: #fff;
     --black: #231f20;
+    --blue: #1D4398;
     --gray: #e4ddd9;
     --gray2: #efe8e4;
 }
@@ -45,6 +47,11 @@ img{
 }
 .bold{
     font-weight: bold;
+}
+.text{
+    color: #6c6c6c;
+    font-size: 14px;
+    text-align: start;
 }
 .container{
     max-width: 1315px;
@@ -92,7 +99,7 @@ header{
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,3 +117,51 @@ header{
     margin-right: auto;
 }
 /*banenr*/
+
+
+/*ultimos lançamentos*/
+.releases{
+    height: 100vh;
+}
+.releases-slider{
+    display: flex;
+    align-items: center;
+}
+.product-card{
+    transition: .3s;
+    border-color: #19b5f1;
+}
+.product-card h1{
+    text-align: start;
+    margin-top: 30px;
+}
+.product-card p{
+    margin-top: 40px;
+}
+.product-card span{
+    display: block;
+    height: 5px;
+    width: 25%;
+    background-color: #e5e5e5;
+    transition: 0.3s;
+}
+.product-card:hover{
+    border-bottom: 1px solid #19b5f1;
+}
+.product-card:hover span{
+    background-color: var(--blue);
+    width: 30%;
+}
+.product-card-infos{
+    transition: 0.3s;
+}
+.product-card-infos p{
+    margin-bottom: 20px;
+}
+.product-card:hover .product-card-infos{
+    padding: 0px;
+}
+.pagination-releases{
+    display: none;
+}
+/*ultimos lançamentos*/
