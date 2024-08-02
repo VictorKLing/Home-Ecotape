@@ -6,6 +6,7 @@
     list-style: none;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    box-sizing: border-box;
 }
 
 :root{
@@ -73,27 +74,91 @@ header{
 .nav-menu{
     display: flex;
     flex-wrap: wrap;
-    gap: 48px;
-    align-items: center;
-}
-.nav-menu li{
-    height: 100px;
-    display: flex;
+    gap: 33px;
     align-items: center;
 }
 .nav-menu a{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 4px solid transparent;
     color: var(--black);
+
+}
+.nav-menu a:hover{
+    border-bottom: 4px solid var(--blue);
+}
+.ativo{
+    border-bottom: 4px solid var(--blue) !important;
+}
+.nav-menu span{
+    width: 2px;
+    height: 24px;
+    background-color: #c1b4ad;
+}
+.dropdown-header-open{
+    position: absolute;
+    z-index: 100;
+    background-color: var(--white);
+    display: none;
+    top: 100px;
+    left: 720px;
+    padding: 0px 30px 0px 50px;
+}
+.dropdown-header-open ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dropdown-header-open .ativo{
+    border-color: transparent !important;
+}
+.dropdown-header-open a{
+    padding: 0px;
+    height: max-content;
+    position: relative;
+    border: none;
+
+}
+.dropdown-header-open li:hover{
+    border: none;
+}
+.dropdown-header-open a::before{
+    content: "\f101";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    color: var(--blue);
+}
+.dropdown-header:hover .dropdown-header-open{
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 .language{
     display: flex;
     gap: 14px;
 }
+.language button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /*header*/
 
 /*banenr*/
 .swiper {
     width: 100%;
     height: 100%;
+    background-color: var(--white);
+    position: relative;
   }
 
 .swiper-slide {
@@ -116,6 +181,26 @@ header{
     margin-left: auto;
     margin-right: auto;
 }
+.voltar-pular-slide-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1200px;
+}
+.voltar-slide-banner, .pular-slide-banner{
+    padding: 15px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+}
 /*banenr*/
 
 
@@ -124,6 +209,25 @@ header{
     margin-top: 80px;
     padding-bottom: 75px;
     border-bottom: 1px solid #e5e5e5;
+}
+.bold-tittle-releases-content{
+    font-weight: bold;
+}
+.releases-tittle{
+    display: flex;
+    justify-content: space-between;
+}
+.releases-tittle-tittle{
+    width: 200px;
+}
+.releases-tittle-line{
+    height: 1px;
+    width: 90%;
+    background-color: #bbc6e0;
+    margin-top: 18px;
+}
+.releases-tittle-line span{
+    align-items: flex-end;
 }
 .releases-slider{
     display: flex;
@@ -134,6 +238,16 @@ header{
 .product-card{
     transition: .3s;
     border-color: #19b5f1;
+    border: 1px solid white;
+}
+.product-card-img{
+    width: 250px;
+    height: 250px;
+}
+.product-card-img img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 .product-card h1{
     text-align: start;
@@ -177,8 +291,7 @@ header{
 .voltar-slide, .pular-slide{
     border: 1px solid var(--blue);
     padding: 15px;
-    width: 17px;
-    height: 17px;
+    width: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -241,8 +354,14 @@ header{
     display: flex;
     justify-content: center;
 }
-
-.catalog-form form button {
+.button-container button{
+    border: none;
+}
+.button-container i{
+    color: #3499d3;
+    font-size: 20px;
+}
+.button-container a {
     width: 350px;
     padding: 10px;
     display: flex;
@@ -254,10 +373,7 @@ header{
     background-color: var(--white);
     cursor: pointer;
 }
-.catalog-form i{
-    color: var(--blue);
-    font-size: 20px;
-}
+
 .catalog-products-cards{
     display: flex;
     gap: 36px;
@@ -322,7 +438,7 @@ header{
     background-color: var(--blue);
     border: none;
     border-radius: 4px;
-
+    cursor: pointer;
 }
 .footer-infos{
     background-color: var(--gray);
@@ -407,10 +523,12 @@ header{
 }
 .copyright{
     background-color: var(--gray);
+    border-top: 1px solid #c2b5ae;
 }
 .Copyright-content{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 40px 0;
 }
 /*footer*/
