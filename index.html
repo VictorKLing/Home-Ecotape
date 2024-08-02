@@ -21,18 +21,42 @@
                 </div>
                 <nav class="menu">
                     <ul class="nav-menu">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Quem Somos</a></li>
-                        <li><a href="">Produtos</a></li>
-                        <li><a href="">Downloads</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./quem-somos.html">Quem Somos</a></li>
+                        <li class="dropdown-header">
+                            <a href="./produtos.html">Produtos</a>
+                            <div class="dropdown-header-open">
+                                <ul>
+                                    <li><a href="./">Fita Kraft</a></li>
+                                    <li><a href="./">Fita Crepe</a></li>
+                                    <li><a href="./">Fita Gomada</a></li>
+                                    <li><a href="./">Aplicadores/Dispensadores</a></li>
+                                </ul>
+                                <img src="./img/produtos/fita kraft.png" alt="">
+                            </div>
+                        </li>
+                        <li><a href="./downloads.html">Downloads</a></li>
+                        <li><a href="./contato.html">Contato</a></li>
+                        <span></span>
                         <i class="fa-solid fa-magnifying-glass blue font7"></i>
                     </ul>
                 </nav>
                 <div class="language">
-                    <i class="fa-regular fa-flag"></i>
-                    <i class="fa-regular fa-flag"></i>
-                    <i class="fa-regular fa-flag"></i>
+                    <div class="language-pt">
+                        <button><img src="./img/icons/bandeira-brasil.png" alt="">
+                            <h1 class="font1 blue">PT</h1>
+                        </button>
+                    </div>
+                    <div class="language-en">
+                        <button><img src="./img/icons/bandeira-espanha.png" alt="">
+                            <h1 class="font1 blue">EN</h1>
+                        </button>
+                    </div>
+                    <div class="language-es">
+                        <button><img src="./img/icons/bandeira-estadosunidos.png" alt="">
+                            <h1 class="font1 blue">ES</h1>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -57,22 +81,33 @@
                     <img src="./img/banner1.png" alt="">
                   </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
-              </div>
+                <div class="voltar-pular-slide-banner">
+                    <a class="voltar-slide-banner" href=""><img src="./img/icons/back-slide.png" alt=""></a>
+                    <a class="pular-slide-banner" href=""><img src="./img/icons/skip-slide.png" alt=""></a>
+                </div>
+            </div>
         </section>
         <section class="releases">
             <div class="container">
                 <div class="releases-content">
-                    <h1 class="font4">Ultimos <span class="bold">Lançamentos</span></h1>
+                    <div class="releases-tittle">
+                        <div class="releases-tittle-tittle">
+                            <h1 class="font4">Ultimos <span class="bold-tittle-releases-content">Lançamentos</span></h1>
+                        </div>
+                        <div class="releases-tittle-line">
+                            <span></span>
+                        </div>
+                    </div>
                     <div class="releases-slider">
                         <a class="voltar-slide" href=""><img src="./img/icons/back-slide.png" alt=""></a>
                         <div class="swiper mySwiper-releases">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                 <div class="product-card">
-                                    <img src="./img/produtos/fita kraft.png" alt="">
+                                    <div class="product-card-img">
+                                        <img src="./img/produtos/fita kraft.png" alt="">
+                                    </div>
                                     <span></span>
                                     <div class="product-card-infos">
                                         <h1 class="font4 blue">Fita Kraft crepada 515</h1>
@@ -86,7 +121,9 @@
                               </div>
                               <div class="swiper-slide">
                                 <div class="product-card">
-                                    <img src="./img/produtos/fita kraft.png" alt="">
+                                    <div class="product-card-img">
+                                        <img src="./img/produtos/fita kraft-papel.png" alt="">
+                                    </div>
                                     <span></span>
                                     <div class="product-card-infos">
                                         <h1 class="font4 blue">Fita Kraft crepada 515</h1>
@@ -100,7 +137,9 @@
                               </div>
                               <div class="swiper-slide">
                                 <div class="product-card">
-                                    <img src="./img/produtos/fita kraft.png" alt="">
+                                    <div class="product-card-img">
+                                        <img src="./img/produtos/fita kraft-papel-impressa.png" alt="">
+                                    </div>
                                     <span></span>
                                     <div class="product-card-infos">
                                         <h1 class="font4 blue">Fita Kraft crepada 515</h1>
@@ -114,7 +153,9 @@
                               </div>
                               <div class="swiper-slide">
                                 <div class="product-card">
-                                    <img src="./img/produtos/fita kraft.png" alt="">
+                                    <div class="product-card-img">
+                                        <img src="./img/produtos/fita-crepe-imobiliaria.png" alt="">
+                                    </div>
                                     <span></span>
                                     <div class="product-card-infos">
                                         <h1 class="font4 blue">Fita Kraft crepada 515</h1>
@@ -128,7 +169,9 @@
                               </div>
                               <div class="swiper-slide">
                                 <div class="product-card">
-                                    <img src="./img/produtos/fita kraft.png" alt="">
+                                    <div class="product-card-img">
+                                        <img src="./img/produtos/fita-crepe-imobiliaria.png" alt="">
+                                    </div>
                                     <span></span>
                                     <div class="product-card-infos">
                                         <h1 class="font4 blue">Fita Kraft crepada 515</h1>
@@ -164,13 +207,17 @@
                         <h1 class="bold blue font7">
                             Preencha o formulário abaixo para baixar o catálogo
                         </h1>
-                        <form action="./">
-                            <input type="text" id="nome" name="nome" placeholder="Nome*">
-                            <input type="email" id="email" name="email" placeholder="E-mail*">
-                            <input type="text" id="empresa" name="empresa" placeholder="Empresa*">
-                            <input type="email" id="email" name="email" placeholder="E-mail*">
+                        <form onsubmit="submitForm(event)">
+                            <input type="text" id="nome" name="nome" placeholder="Nome*" required>
+                            <input type="email" id="email" name="email" placeholder="E-mail*" required>
+                            <input type="text" id="empresa" name="empresa" placeholder="Empresa*" required>
+                            <input type="email" id="email" name="email" placeholder="E-mail*" required>
                             <div class="button-container">
-                                <button class="bold black font2"><i class="fa-solid fa-file-arrow-down"></i>ENVIAR E FAZER DOWNLOAD</button>
+                                <button type="submit">
+                                    <a id="downloadLink" class="bold black font2 disabled" target="_blank">
+                                        <i class="fa-solid fa-file-arrow-down"></i>ENVIAR E FAZER DOWNLOAD
+                                    </a>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -302,5 +349,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js" ></script>
+    <script src="./js/download-catalog.js"></script>
+    <script src="./js/pagina-ativa.js"></script>
 </body>
 </html>

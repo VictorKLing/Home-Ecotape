@@ -7,8 +7,8 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".pular-slide-banner",
+      prevEl: ".voltar-slide-banner",
     },
 });
 var swiper = new Swiper(".mySwiper-releases", {
