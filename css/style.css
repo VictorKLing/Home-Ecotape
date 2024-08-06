@@ -13,6 +13,7 @@
     --white: #fff;
     --black: #231f20;
     --blue: #1D4398;
+    --blue2: #1a4a72;
     --gray: #e4ddd9;
     --gray2: #efe8e4;
 }
@@ -150,6 +151,65 @@ header{
     flex-direction: column;
     gap: 10px;
 }
+.burger{
+    display: none;
+}
+.burger i{
+    font-size: 30px;
+    color: var(--blue);
+}
+@media (max-width: 1150px) {
+    .nav-menu{
+        gap: 20px;
+    }
+}
+@media (max-width: 1020px) {
+    .menu{
+        display: none;
+    }
+    .header-content{
+        padding: 15px 0;
+    }
+    .logo-header img{
+        width: 70%;
+    }
+    .burger{
+        display: block;
+    }
+}
+/*menu lateral*/
+.menu-lateral-header {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background-color: #fcfcfc;
+    height: 100vh;
+    max-width: 500px;
+    width: 100%;
+    transition: left .5s ease;
+    z-index: 10000;
+  }
+  
+.menu-lateral-header.ativo {
+    left: 0;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    
+}
+.overlay.ativar{
+    right: 0;
+    display: block;
+}
+/*menu lateral*/
 
 /*header*/
 
@@ -253,13 +313,13 @@ header{
     text-align: start;
     margin-top: 30px;
 }
-.product-card p{
+.info-product {
     margin-top: 40px;
 }
 .product-card span{
     display: block;
     height: 5px;
-    width: 25%;
+    width: 40%;
     background-color: #e5e5e5;
     transition: 0.3s;
 }
@@ -268,22 +328,25 @@ header{
 }
 .product-card:hover span{
     background-color: var(--blue);
-    width: 30%;
+    width: 45%;
 }
 .product-card-infos{
     transition: 0.3s;
+}
+.product-card-infos h1{
+    color: var(--blue2);
 }
 .product-card:hover .product-card-infos{
     padding: 0px 20px;
 }
 .info-product{
     line-height: 1.5;
-    height: calc(1.5em * 3);
 }
 .code-product{
     margin-bottom: 20px;
     color: transparent;
     transition: 0.3s;
+    padding-top: 40px;
 }
 .product-card:hover .code-product{
     color: #6c6c6c;
@@ -298,6 +361,63 @@ header{
 }
 .pagination-releases{
     display: none;
+}
+@media (max-width: 1020px) {
+    .voltar-slide, .pular-slide{
+        display: none;
+    }
+    .product-card{
+        border-bottom: 1px solid #19b5f1;
+    }
+    .product-card span{
+        background-color: var(--blue);
+        width: 160px;
+    }
+    .product-card:hover span{
+        width: 160px;
+    }
+    .code-product{
+        color: #6c6c6c;
+    }
+    .product-card-img img{
+        max-width: 80%;
+    }
+    .product-card:hover .product-card-infos{
+        padding: 0;
+    }
+    .pagination-releases{
+        display: block;
+    }
+    .navigation-slides-releases{
+        margin-top: 50px;
+    }
+}
+@media (max-width: 880px) {
+    .releases-tittle-line{
+        width: 80%;
+    }
+}
+@media (max-width: 767px) {
+    .product-card-img img{
+        max-width: 65%;
+    }
+    .info-product{
+        margin-top: 20px;
+    }
+    .code-product{
+        padding-top: 20px;
+    }
+    .releases-tittle-line{
+        width: 70%;
+    }
+    .releases-slider{
+        margin-top: 0px;
+    }
+}
+@media (max-width: 500px) {
+    .releases-tittle-line{
+        width: 50%;
+    }
 }
 /*ultimos lançamentos*/
 
@@ -423,6 +543,37 @@ header{
     padding: 10px 48px;
     border: 1px solid var(--blue);
     border-radius: 4px;
+}
+@media (max-width: 800px) {
+    .catalog-introduction-img{
+        margin-top: -80px;
+    }
+    .catalog-introduction-img img{
+        width: 120px;
+    }
+    .catalog-introduction-text{
+        margin-top: -15px;
+    }
+    .catalog-introduction-text h2{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+@media (max-width: 767px) {
+    .catalog-introduction-text h2{
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+    .catalog-introduction-img{
+        display: none;
+    }
+    .catalog-introduction-text{
+        width: 100%;
+    }
+    .catalog-introduction-text h2{
+        text-align: center;
+        padding-left: 0;
+    }
 }
 /*catalogo*/
 /*footer*/
