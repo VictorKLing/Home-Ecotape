@@ -485,6 +485,7 @@ header{
     }
     .newsletter-form button{
         margin-left: 0;
+        padding: 15px 48px;
     }
     .newsletter-form input{
         width: 100%;
@@ -508,6 +509,11 @@ header{
 
 .footer-infos-about p{
     margin-top: 25px;
+    color: #000;
+    font-weight: 500;
+}
+.footer-infos-about h1{
+    font-weight: 500;
 }
 .footer-infos-about h2{
     margin-top: 40px;
@@ -525,7 +531,6 @@ header{
 }
 .footer-infos-col1-whats{
     background-color: var(--white);
-    padding: 10px 20px;
     display: block;
     width: max-content;
     border-radius: 4px;
@@ -535,6 +540,8 @@ header{
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 10px 20px;
+
 }
 .footer-infos-col1-whats i{
     color: var(--blue);
@@ -552,6 +559,7 @@ header{
 .menu-suspenso a{
     font-size: 12px;
     color: var(--black);
+    font-weight: 500;
 }
 .menu-suspenso button {
     display: flex;
@@ -565,6 +573,11 @@ header{
     border-bottom: 1px solid var(--blue);
     padding-bottom: 25px;
     margin-bottom: 30px;
+}
+.menu-suspenso dd{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 @media (max-width: 767px) {
     .menu-suspenso{
@@ -582,6 +595,10 @@ header{
         width: 100%;
         margin-bottom: 0px;
         padding-bottom: 0;
+        font-size: 18px;
+    }
+    .menu-suspenso a{
+        font-size: 16px;
     }
     .menu-suspenso button::before {
         display: inline-block;
@@ -593,20 +610,20 @@ header{
     .menu-suspenso button::after {
         content: "";
         display: inline-block;
-        width: 14px;
-        height: 6px;
-        background-image: url('https://d8vlg9z1oftyc.cloudfront.net/lojaolimed/lojaolimed-file-manager/seta-abrir-faq.png');
+        width: 10px;
+        height: 17px;
+        background-image: url(../img/icons/skip-slide.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         transition: 0.3s;
     }
     .menu-suspenso button[aria-expanded="true"]::after {
-        transform: rotate(180deg);
+        transform: rotate(90deg);
     }
     
     .menu-suspenso dd {
-        display: block;
+        gap: 20px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease, padding 0.3s ease;
@@ -614,13 +631,18 @@ header{
     }
     
     .menu-suspenso dd.ativa {
-        max-height: 200px;
+        max-height: 3000px;
         padding: 16px 0px;
     }
     
     .menu-suspenso dd {
         padding-top: 16px;
         max-width: 80ch;
+    }
+    .menu-suspenso span{
+        width: 175px;
+        height: 1px;
+        background-color: var(--blue);
     }
 }
 
@@ -645,6 +667,34 @@ header{
     .footer-infos-content{
         grid-template-columns: 1fr;
     }
+    .footer-infos-logo{
+        display: flex;
+        justify-content: center;
+    }
+    .footer-infos-about h1, .footer-infos-about p, .footer-infos-about h2{
+        text-align: center;
+    }
+    .footer-infos-about > h1::before{
+        content: "";
+        width: 2px;
+        height: 14px;
+        background-color: var(--blue);
+        position: absolute;
+        margin-left: -10px;
+    }
+    .footer-infos-col1-phone{
+        justify-content: center;
+    }
+    .footer-infos-col1-whats {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .footer-infos-col1-whats a {
+        justify-content: center;
+    }
     .footer-infos-col2-social-media{
         flex-direction: column;
         justify-content: center;
@@ -667,15 +717,36 @@ header{
     display: flex;
     gap: 20px;
 }
+
+
 .copyright{
     background-color: var(--gray);
     border-top: 1px solid #c2b5ae;
 }
-.Copyright-content{
+.copyright-content{
     display: flex;
+    gap: 35px;
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
+}
+@media (max-width: 767px) {
+    .copyright-content{
+        flex-direction: column;
+    }
+    .copyright-content p{
+        order: 2;
+    }
+    .copyright{
+        border-top: none;
+    }
+    .copyright-content-logo{
+        border-bottom: 1px solid #c2b5ae;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 35px;
+    }
 }
 /*footer*/
 
