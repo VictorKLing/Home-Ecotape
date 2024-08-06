@@ -23,4 +23,15 @@ var swiper = new Swiper(".mySwiper-releases", {
       nextEl: ".pular-slide",
       prevEl: ".voltar-slide",
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+      1320: {
+        slidesPerView: 4,
+      }
+    }
 });
