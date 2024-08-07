@@ -20,6 +20,7 @@
 img{
     max-width: 100%;
 }
+
 .blue{
     color: var(--blue);
 }
@@ -120,7 +121,6 @@ header{
     height: max-content;
     position: relative;
     border: none;
-
 }
 .dropdown-header-open li:hover{
     border: none;
@@ -158,6 +158,7 @@ header{
     font-size: 30px;
     color: var(--blue);
 }
+
 @media (max-width: 1150px) {
     .nav-menu{
         gap: 20px;
@@ -182,16 +183,100 @@ header{
     position: fixed;
     left: -100%;
     top: 0;
+    width: 100%;
+    transition: left .5s ease;
+    z-index: 10000;
+    display: flex;
+}
+.menu-lateral-header.ativo {
+    left: 0;
+}
+.menu-lateral-header-content{
     background-color: #fcfcfc;
     height: 100vh;
     max-width: 500px;
     width: 100%;
-    transition: left .5s ease;
-    z-index: 10000;
-  }
-  
-.menu-lateral-header.ativo {
-    left: 0;
+    padding: 20px;
+    overflow-y: auto;
+}
+.botao-fechar{
+    background-color: var(--white);
+    height: max-content;
+    padding: 10px 20px;
+    border-radius: 0px 4px 4px 0px;
+}
+.menu-lateral-header-content-logo{
+    display: flex;
+    justify-content: center;
+}
+.menu-lateral-header-content a{
+    color: var(--black);
+    font-size: 16px;
+}
+.menu-lateral-header-content h2{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 500;
+}
+.menu-lateral-header-content > ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.menu-lateral-header-content li{
+    margin-bottom: 20px;
+}
+.menu-lateral-header-content-quem-somos{
+    margin-bottom: 5px !important;
+}
+.menu-lateral-col1-phone{
+    margin-top: 40px;
+}
+.menu-lateral-col1-phone, .menu-lateral-col1-whats a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu-lateral-col1-phone i{
+    font-size: 30px;
+    color: var(--blue);
+}
+.menu-lateral-col1-phone h1{
+    font-weight: 500;
+}
+.menu-lateral-col1-whats{
+    margin-top: 25px;
+}
+.menu-lateral-col1-whats i{
+    font-size: 25px;
+    color: var(--blue);
+}
+.menu-lateral-col1-whats a{
+    font-size: 12px;
+}
+.menu-lateral-header-content > h1{
+    margin-top: 25px;
+}
+.menu-lateral-header-content .box-links button{
+    font-size: 16px;
+    color: var(--black);
+}
+.menu-lateral-header-content .box-links dd{
+    padding-top: 0;
+}
+#produto-menu-lateral li{
+    position: relative;
+    padding-left: 25px;
+    display: flex;
+}
+#produto-menu-lateral li::after{
+    content: "\f101";
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    left: 0px;
+    top: 4px;
+    color: var(--blue);
 }
 .overlay {
     position: fixed;
@@ -253,6 +338,7 @@ header{
     align-items: center;
     gap: 1200px;
 }
+
 .voltar-slide-banner, .pular-slide-banner{
     padding: 15px;
     width: 50px;
@@ -260,6 +346,17 @@ header{
     display: flex;
     justify-content: center;
     background-color: var(--white);
+}
+.banner-mobile{
+    display: none;
+}
+@media (max-width: 1020px) {
+    .banner{
+        display: none;
+    }
+    .banner-mobile{
+        display: block;
+    }
 }
 /*banenr*/
 
@@ -503,22 +600,7 @@ header{
     cursor: pointer;
 }
 @media (max-width: 761px) {
-    .catalog-form form{
-        grid-template-columns: 1fr;
-    }
-    .catalog-form{
-        padding: 50px 0px 30px;
-        border: none;
-    }
-    .button-container{
-        grid-column: 1;
-    }
-    .button-container a{
-        width: 100%;
-    }
-    .button-container button{
-        width: 100%;
-    }
+    
 }
 .catalog-products-cards{
     display: flex;
@@ -533,7 +615,7 @@ header{
     background-color: #e8ecf4;
     padding: 40px 10px 35px 35px;
     border-radius: 4px;
-    flex: 1 400px;
+    flex: 1 450px;
 }
 .catalog-products-card-introduction p{
     margin-top: 30px;
@@ -544,6 +626,10 @@ header{
     border: 1px solid var(--blue);
     border-radius: 4px;
 }
+.catalog-products-cards-responsive{
+    display: none;
+}
+
 @media (max-width: 800px) {
     .catalog-introduction-img{
         margin-top: -80px;
@@ -560,12 +646,11 @@ header{
     }
 }
 @media (max-width: 767px) {
-    .catalog-introduction-text h2{
-        padding-top: 25px;
-        padding-bottom: 20px;
+    .catalog-products-cards-responsive{
+        display: block;
     }
-    .catalog-introduction-img{
-        display: none;
+    .catalog-introduction{
+        padding: 0 20px;
     }
     .catalog-introduction-text{
         width: 100%;
@@ -573,6 +658,76 @@ header{
     .catalog-introduction-text h2{
         text-align: center;
         padding-left: 0;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+    .catalog-introduction-text h1{
+        margin-left: 1%;
+        position: relative;
+        font-size: 16px;
+
+    }
+    .catalog-introduction-img{
+        display: none;
+    }
+    .catalog-introduction-text h1::after {
+        content: "";
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background: url(../img/img-catalogo.png) no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -100px;
+    }
+    .catalog-products-cards, .voltar-pular-slide-catalog{
+        display: none;
+    }
+    .catalog-products-card{
+        grid-template-columns: 1fr;
+        padding: 30px 46px 45px 46px;
+    }
+    .catalog-products-card-introduction{
+        order: 2;
+    }
+    .catalog-products-card-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        overflow: hidden; /* Esconder qualquer parte da imagem que ultrapasse a div */
+      }
+      
+      .catalog-products-card-img img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Faz com que a imagem se ajuste dentro do container sem cortar */
+      }
+      .catalog-products-card-introduction p{
+        height: calc(1.5em * 3);
+      }
+      .navigation-slides-catalog{
+        margin-top: 40px;
+      }
+      .catalog-form form{
+        grid-template-columns: 1fr;
+    }
+    .catalog-form{
+        padding: 50px 0px 30px;
+        border: none;
+    }
+    .button-container{
+        grid-column: 1;
+    }
+    .button-container a{
+        width: 100%;
+    }
+    .button-container button{
+        width: 100%;
     }
 }
 /*catalogo*/
@@ -703,7 +858,9 @@ header{
     grid-template-columns: 1fr 1fr;
     gap: 100px;
 }
-  
+.footer-infos-col2 button{
+    color: #000;
+}
 .menu-suspenso h2 {
     margin-bottom: 60px;
 }

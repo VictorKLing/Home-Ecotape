@@ -5,11 +5,14 @@ const overlay = document.querySelector('.overlay');
 function mostrar() {
   const texto = document.querySelector('.menu-lateral-header');
   texto.classList.toggle('ativo');
+  overlay.classList.toggle('ativar')
 }
 
 function fechar() {
   const texto = document.querySelector('.menu-lateral-header');
   texto.classList.remove('ativo');
+  overlay.classList.toggle('ativar')
+
 }
 
 botaoAbrir.addEventListener('click', mostrar);
