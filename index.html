@@ -14,6 +14,7 @@
 </head>
 <body>
     <div class="overlay"></div>
+    <div class="overlay-open-select-language"></div>
     <header>
         <div class="menu-lateral-header">
             <div class="menu-lateral-header-content">
@@ -85,7 +86,17 @@
                         <li><a href="./downloads.html">Downloads</a></li>
                         <li><a href="./contato.html">Contato</a></li>
                         <span></span>
-                        <i class="fa-solid fa-magnifying-glass blue font7"></i>
+                        <button class="nav-menu-search">
+                            <i class="fa-solid fa-magnifying-glass blue font7"></i>
+                        </button>
+                        <div class="open-search ">
+                            <form action="">
+                                <input type="search" placeholder="Digite a sua busca...">
+                                <button>
+                                    <i class="fa-solid fa-magnifying-glass blue font7"></i>
+                                </button>
+                            </form>
+                        </div>
                     </ul>
                 </nav>
                 <div class="language">
@@ -104,7 +115,45 @@
                             <h1 class="font1 blue">ES</h1>
                         </button>
                     </div>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass blue font7"></i>
+                    </button>
                 </div>
+                <div class="search-select-language">
+                    <button class="select-language">
+                        <img src="./img/icons/bandeira-brasil.png" alt="">
+                        <h1 class="font1 blue">PT</h1>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass blue font7"></i>
+                    </button>
+                </div>
+                
+                
+                <div class="language-responsivo">
+                    <a href="#" class="burger botao-fechar-idioma">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                    <div class="select-language-content">
+                        <h1>Selecione o Idioma</h1>
+                        <div class="language-pt">
+                            <button><img src="./img/icons/bandeira-brasil.png" alt="">
+                                <h2 class="font1 blue">Português</h2>
+                            </button>
+                        </div>
+                        <div class="language-en">
+                            <button><img src="./img/icons/bandeira-espanha.png" alt="">
+                                <h2 class="font1 blue">Español</h2>
+                            </button>
+                        </div>
+                        <div class="language-es">
+                            <button><img src="./img/icons/bandeira-estadosunidos.png" alt="">
+                                <h2 class="font1 blue">English</h2>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </header>
@@ -469,5 +518,7 @@
     <script src="./js/pagina-ativa.js"></script>
     <script src="./js/footer-responsivo.js" ></script>
     <script src="./js/menu-lateral.js" ></script>
+    <script src="./js/mudar-idioma.js" ></script>
+    <script src="js/abrir-pesquisa.js" ></script>
 </body>
 </html>
